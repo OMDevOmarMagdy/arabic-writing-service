@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
-use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(): View
     {
-        $services = Service::where('is_active', true)->get();
+        $services = Service::active()->get();
 
         return view('home', compact('services'));
     }

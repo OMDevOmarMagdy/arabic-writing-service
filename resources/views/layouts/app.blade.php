@@ -39,10 +39,6 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('services.index') }}">إدارة الخدمات</a>
-                    </li>
-
-                    <li class="nav-item">
                         <a class="nav-link" href="#contact">تواصل معنا</a>
                     </li>
 

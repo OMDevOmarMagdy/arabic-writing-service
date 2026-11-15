@@ -21,5 +21,13 @@ class DatabaseSeeder extends Seeder
             'name' => 'Test User',
             'email' => 'test@example.com',
         ]);
+
+        // Create an admin user with a secure hashed password
+        \App\Models\User::create([
+            'name' => 'Admin',
+            'email' => 'admin@example.com',
+            'password' => \Illuminate\Support\Facades\Hash::make('ChangeMe123!'),
+            'role' => 'admin',
+        ]);
     }
 }

@@ -23,7 +23,7 @@ class ServiceSeeder extends Seeder
                 'slug' => 'audio-transcription',
                 'description' => 'تحويل التسجيلات الصوتية إلى نصوص مكتوبة.',
                 'price' => 15.00,
-                'pricing_type' => 'per_hour',
+                'pricing_type' => 'per_min',
                 'is_active' => true,
             ],
             [
