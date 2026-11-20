@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Redirect default login route to admin login (required for Laravel auth redirects)
-Route::get('login', fn () => redirect()->route('admin.login'))->name('login');
+Route::get('login', fn() => redirect()->route('admin.login'))->name('login');
 
 /*
 |--------------------------------------------------------------------------
@@ -31,7 +31,7 @@ Route::prefix('admin')->group(function () {
     });
 
     // Redirect /admin to dashboard
-    Route::get('/', fn () => redirect()->route('admin.dashboard'));
+    Route::get('/', fn() => redirect()->route('admin.dashboard'));
 
     // Protected admin routes
     Route::middleware(['auth', 'admin'])->group(function () {
